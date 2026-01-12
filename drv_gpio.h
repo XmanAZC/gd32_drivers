@@ -19,7 +19,9 @@
 extern "C" {
 #endif
 
-#if defined SOC_SERIES_GD32F10x
+#if defined SOC_SERIES_GD32C10x
+#include "gd32c10x_gpio.h"
+#elif defined SOC_SERIES_GD32F10x
 #include "gd32f10x_gpio.h"
 #elif defined SOC_SERIES_GD32F20x
 #include "gd32f20x_gpio.h"
