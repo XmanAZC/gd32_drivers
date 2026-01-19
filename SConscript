@@ -65,6 +65,9 @@ if GetDepend('RT_USING_CAN'):
 if GetDepend('BSP_USING_SDRAM'):
     src += ['drv_sdram.c']
 
+if GetDepend('BSP_USING_SIMPLE_UART'):
+    src += ['drv_simple_uart.c']
+
 path = [cwd]
 
 group = DefineGroup('Drivers', src, depend = [''], CPPPATH = path)
